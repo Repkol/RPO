@@ -1,8 +1,5 @@
 import turtle
-
 import te as te
-
-
 import time
 WriteStep = 15  # Sampling times of Bessel function
 Speed = 5
@@ -10,8 +7,6 @@ Width = 600  # Interface width
 Height = 500  # Interface height
 Xh = 0  # Record the handle of the previous Bessel function
 Yh = 0
-
-
 def Bezier(p1, p2, t):  # First order Bessel function
     return p1 * (1 - t) + p2 * t
 
@@ -133,7 +128,6 @@ def Smooth(x2, y2, x, y):  # Smooth the third-order Bezier curve to (x, y)
                  X_now + x2, Y_now + y2, X_now + x, Y_now + y)
         Xh = x - x2
         Yh = y - y2
-
     te.tracer(10)
     te.setup(Width, Height, 0, 0)
     te.pensize(1)
@@ -491,7 +485,6 @@ def Smooth(x2, y2, x, y):  # Smooth the third-order Bezier curve to (x, y)
     lineto(-11, -8)
     Curveto(382, 204, 357, 206, 354, 207)
     te.end_fill()
-
     # Layer_17
     te.color("#F5F5F5", "#F5F5F5")  # Eye 3
     Moveto(253, 211)
